@@ -45,3 +45,10 @@ O **Happy** é uma aplicação ministrada pela [Rocketseat](https://rocketseat.c
 1. Entre na pasta rodando `cd web`;
 2. Rode `yarn` para instalar as dependências;
 3. Rode `yarn start`;
+
+#### Mobile
+
+1. Entre na pasta rodando `cd mobile`;
+2. Com o `expo` instalado rode `yarn` para instalar as dependências;
+3. Rode `yarn start`;
+4. Com seu celular escaneie o QR Code que irá aparecer na página ou rode diretamente em um emulador instalado em sua máquina;
