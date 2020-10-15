@@ -40,9 +40,7 @@ export default function CreateOrphanage() {
 
     setImages(selectedImages);
 
-    const selectedImagesPreview = selectedImages.map((image) =>
-      URL.createObjectURL(image),
-    );
+    const selectedImagesPreview = selectedImages.map(image => URL.createObjectURL(image),);
 
     setPreviewImages(selectedImagesPreview);
   }
@@ -62,7 +60,7 @@ export default function CreateOrphanage() {
     data.append('opening_hours', opening_hours);
     data.append('open_on_weekends', String(open_on_weekends));
 
-    images.forEach((image) => {
+    images.forEach(image => {
       data.append('images', image);
     });
 
@@ -105,21 +103,21 @@ export default function CreateOrphanage() {
               <input
                 id="name"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={e => setName(e.target.value)}
               />
             </div>
 
             <div className="input-block">
               <label htmlFor="about">
                 Sobre
-{' '}
-<span>Máximo de 300 caracteres</span>
+                {' '}
+                <span>Máximo de 300 caracteres</span>
               </label>
               <textarea
                 id="name"
                 maxLength={300}
                 value={about}
-                onChange={(e) => setAbout(e.target.value)}
+                onChange={e => setAbout(e.target.value)}
               />
             </div>
 
@@ -127,7 +125,7 @@ export default function CreateOrphanage() {
               <label htmlFor="images">Fotos</label>
 
               <div className="images-container">
-                {previewImages.map((image) => (
+                {previewImages.map(image => (
                   <img key={image} src={image} alt={name} />
                 ))}
                 <label htmlFor="image[]" className="new-image">
@@ -151,7 +149,7 @@ export default function CreateOrphanage() {
               <textarea
                 id="instructions"
                 value={instruction}
-                onChange={(e) => setInstruction(e.target.value)}
+                onChange={e => setInstruction(e.target.value)}
               />
             </div>
 
@@ -160,7 +158,7 @@ export default function CreateOrphanage() {
               <input
                 id="opening_hours"
                 value={opening_hours}
-                onChange={(e) => setOpeningHours(e.target.value)}
+                onChange={e => setOpeningHours(e.target.value)}
               />
             </div>
 

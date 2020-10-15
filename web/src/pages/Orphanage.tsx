@@ -33,7 +33,7 @@ export default function Orphanage() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   useEffect(() => {
-    api.get(`orphanages/${params.id}`).then(response => {
+    api.get(`orphanages/${params.id}`).then((response) => {
       setOrphanage(response.data);
       console.log(response.data);
     });
@@ -114,24 +114,24 @@ export default function Orphanage() {
               <div className="hour">
                 <FiClock size={32} color="#15B6D6" />
                 Segunda à Sexta
-                {' '}
-                <br />
+{' '}
+<br />
                 {orphanage.opening_hours}
               </div>
               {orphanage.open_on_weekends ? (
                 <div className="open-on-weekends">
                   <FiInfo size={32} color="#39CC83" />
                   Atendemos
-                  {' '}
-                  <br />
+{' '}
+<br />
                   fim de semana
                 </div>
               ) : (
                 <div className="open-on-weekends dont-open">
                   <FiInfo size={32} color="#ff6690" />
                   Não Atendemos
-                  {' '}
-                  <br />
+{' '}
+<br />
                   fim de semana
                 </div>
               )}
